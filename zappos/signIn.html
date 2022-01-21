@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn page</title>
+    <style>
+        #container{
+            width: 100%;
+            height: 550px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            
+        }
+    #cont{
+        margin: auto;
+        border:1px solid mediumvioletred;
+        width: 450px;
+        height: 430px;
+        padding: 20px;
+
+    }
+    .logo{
+         margin: auto;
+    }
+
+    #form1{
+        margin: auto;
+         display: grid;
+        width:400px;
+        grid-gap:15px;
+        font-size: 20px;
+    
+    }
+    #sub{
+        border: 2px solid black;
+        background: #003953;
+        color: white;
+        height: 50px;
+        font-weight: bolder;
+    }
+    a{
+        text-decoration: none;
+        font-size: 20px;
+    }
+    a:hover{
+        border-bottom: 1px solid #3f6d80;
+    }
+    #n1{
+        font-size: 20px;
+        font-weight: bold;
+        color:#00395c;
+    }
+    #p1{
+        font-size: 15px;
+        color: gray;
+        margin: auto;
+    }
+    #b1{
+        border: 3px solid #003953;
+        /* width: 350px; */
+        height: 40px;
+        text-align: center;
+        font-weight: bolder;
+        padding-top: 20px;
+        text-decoration: none;
+    }
+    #term{
+        display: flex;
+        /* border: 2px solid gray; */
+        width: 500px;
+        margin: auto;
+       margin-top: 45px;
+        justify-content: space-between;
+    }
+    .p2{
+        margin: auto;
+        margin-left: 640px;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+    <div class="logo">
+        <img src="https://m.media-amazon.com/images/G/01/zappos/melody/black-logo.svg" width="100%" height="60px" ">
+    </div>
+    <div id="cont">
+    <div>
+        <h1>Sign In</h1>
+        <form id="form1">
+            <h>Email </h>
+            <input id="email" type="email"/>
+            <h>Password<a><span id="n1">Forgot your password</span></a></h>  
+            <input id="passw" type="password"  placeholder="At least 6 character"/>
+            <!-- <a><span>Forgot your password</span></a> -->
+            <!-- <button  id="sub" type="submit" value="Sign In"/> -->
+            <button id="sub">Sign In</button>
+            <h>Keep me signed in<a href=""><span>Details</span></a></h>
+
+            <p id="p1">New to Zappos?</p>
+           
+        <a id="b1" href="">Create Your Zappos Account</a>
+        </form>
+        </div>
+    </div>
+    </div>
+    <div id="term">
+        <p><a href="">Terms of use</a></p>
+        <p><a href="">Privacy Policy</a></p>
+        <p><a href="">Customer Service</a></p>
+    </div>
+
+    <p class="p2">© 2009–2022 - Zappos.com LLC or its affiliates</p>
+   
+</body>
+</html>
+
+
+<script>
+    document.querySelector("button").addEventListener("click",user);
+    var arr=JSON.parse(localStorage.getItem("userDatabase"));
+    console.log(arr);
+    function user(event) {
+        event.preventDefault();
+        var email= document.querySelector("#email").value;
+        var pass= document.querySelector("#passw").value;
+        console.log(email, pass);
+       
+        for (let i = 0; i < arr.length; i++) {
+            if(arr[i]. emailAdd== email && arr[i].password==pass){
+                window.location.href="home.html";
+            }
+        }
+    }
+        
+       
+   
+    </script>

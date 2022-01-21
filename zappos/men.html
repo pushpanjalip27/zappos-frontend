@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>women page</title>
+    <script src="https://kit.fontawesome.com/38e4633d90.js" crossorigin="anonymous"></script>
+    <style>
+        #main {
+            border: 2px solid black;
+            width: 10%;
+            height: 60px;
+            background: #0076bd;
+            color: white;
+        }
+
+        #nav1 {
+            display: flex;
+            border: 2px solid black;
+            width: 100%;
+            height: 50px;
+            background: #0076bd;
+            color: white;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        #selectTag {
+
+            width: 100%;
+            background: #0076bd;
+            color: white;
+            font-size: 20px;
+            font-weight: bolder;
+
+        }
+
+        #nav2 {
+            display: flex;
+            /* border: 2px solid black;  */
+            width: 100%;
+            height: 100px;
+            margin-top: 30px;
+            /* justify-content: space-around; */
+            /* align-items:center; */
+        }
+
+        input {
+            margin-left: 100px;
+            height: 40px;
+            padding: 5px 160px;
+            border: 1px solid gray;
+            /* border-style: dashed; */
+            margin-top: 20px;
+            /* border-radius: 5px; */
+
+
+
+        }
+
+        input:hover {
+
+
+            border: 4px solid #0076bd;
+            border-style: dashed;
+            border-radius: 5px;
+        }
+
+
+        button {
+            height: 60px;
+            padding: 10px 50px;
+            background: #003953;
+            color: white;
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        button:hover {
+
+            background: #0076bd;
+        }
+
+        #cart {
+            border: 2px solid #a7e688;
+            margin-left: 350px;
+            height: 60px;
+            width: 180px;
+            margin-top: 20px;
+
+
+        }
+
+        #cart:hover {
+            background: #a7e688;
+        }
+
+        i {
+            padding: 20px;
+            font-size: 20px;
+            margin-left: 10px;
+            color: #0a615e;
+        }
+
+        #selectTag {
+            border: transparent;
+            width: 100%;
+            background: #0076bd;
+
+
+
+        }
+
+        #nav3 {
+
+            display: flex;
+            border: none;
+            width: 100%;
+            height: 60px;
+            margin-top: 15px;
+            gap:30px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+        }
+
+        #nav3>div{
+            font-weight: bolder;
+            color:#557b8b ;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        #nav3>div>a:hover{
+            color: #0076bd;
+            border-bottom: 4px solid #0076bd;
+        }
+
+        #right{
+
+            margin-left: 750px;
+            margin-top: 20px;
+            font-weight: bolder;
+            font-size: 20px;
+            color:#557b8b ;
+
+        }
+        #nav3>div>div>a:hover{
+            color: #0076bd;
+            border-bottom: 4px solid #0076bd;
+        }
+
+        #navbar {
+            text-decoration: none;
+            color: #557b8b;
+            border-bottom: none;
+            font-weight: bolder;
+            font-size: 18px;
+
+        }
+        img {
+            width: 100%;
+            height: 450px;
+        }
+
+        #box {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            /* border: 2px solid red; */
+            /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px; */
+        }
+
+        h1 {
+            border: cornflowerblue;
+            background: darkcyan;
+            color: darkred;
+            width: 200px;
+            padding-left: 20px;
+
+        }
+
+        #flex {
+            display: flex-start;
+            /* justify-content: space-around; */
+        }
+
+        #flex>p:nth-child(2) {
+            text-decoration: line-through;
+        }
+
+        h2{
+            color: #003b5c;
+        }
+        h2:hover{
+            color:#0076bd ;
+            /* border-bottom: 3px solid #0076bd; */
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        h6{
+            font-size: 15px;
+            color: gray;
+        }
+        h6:hover{
+            color:#0076bd ;
+            border-bottom: 3px solid #0076bd;
+            cursor: pointer;
+        }
+
+        #selt{
+           width: 150px;
+           height: 40px;
+           background: rosybrown;
+        }
+
+        #selt1{
+           width: 150px;
+           height: 40px;
+           background:skyblue;
+        }
+
+        #selt2{
+           width: 150px;
+           height: 40px;
+           background:springgreen
+        }
+        #footer{
+            padding-top: 25px;
+        }
+
+        /* small screen */
+        @media only screen and (min-width:0px) and ( max-width:320px) {
+            #box{
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+        /* mediam screen */
+        
+        @media only screen and (min-width:321px) and (max-width:720px) {
+            #box {
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+      
+    </style>
+
+<body>
+    <div id="main">
+        <img src="https://m.media-amazon.com/images/G/01/zappos/melody/black-logo.svg"
+            style="width:120px; height: 60px;" />
+    </div>
+    <div id="nav1">
+        <form>
+            <select id="selectTag">
+                <option value="Customer Support">Customer Support</option>
+                <option value="Contact info">Contact info</option>
+                <option value="FAQ">FAQ</option>
+                <option value="Give Us Feedback">Give Us Feedback</option>
+            </select>
+        </form>
+        <h2>Available 24/7 at (800) 927-7671 </h2>
+        <h2>Try select running shoes for 30 days & return them if you’re not 100% satisfied! More about <br>Runlimited
+        </h2>
+
+
+    </div>
+    <div id="nav2">
+        <img src="https://m.media-amazon.com/images/G/01/zappos/melody/zapposPBS._CB1509642213_.svg"
+            style="width: 180px; height: 120px;" />
+        <input type="text" placeholder="Search For Shoes , Clothes,etc." />
+        <button>Search</button>
+        <div id="cart"><i class="fas fa-shopping-cart">MY CART</i> </div>
+    </div>
+
+    <div id="nav3">
+        <div><a id="navbar" href="new.html">New</a></div>
+        <div><a id="navbar" href="women.html">Women</a></div>
+        <div><a id="navbar" href="men.html">Men</a></div>
+        <div><a id="navbar" href="kids.html">Kids</a></div>
+        <div><a id="navbar" href="department.html">Departments</a></div>
+        <div><a id="navbar" href="sale.html">Sale</a></div>
+        <div><a id="navbar" href="brands.html">Brands</a></div>
+        <div><a id="navbar" href="clothes.html">Clothes</a></div>
+        <div id="right">
+            <div><a id="navbar" href="register.html">Register/SignIn</a></div>
+        </div>
+    </div>
+
+    
+    <h1>mens section</h1>
+
+    <button onclick="window.location.href='cart.html'">Go To Cart</button>
+    <button  onclick="window.location.href='checkout.html'">Go to chechout</button>
+    <select id=selt>
+        <option value="">maens big and tall shirt</option>
+        <option value="">SB</option>
+        <option value="">MB</option>
+        <option value="">LB</option>
+        <option value="">XLB</option>
+    </select>
+
+    <select id=selt1>
+        <option value="">Search Brand</option>
+        <option value="">Under Armor</option>
+        <option value="">Calivin Klien Underwear</option>
+        <option value="">Lavi's Mena</option>
+        <option value="">Van Heusen</option>
+ </select>
+
+ <select id=selt2>
+    <option value="">Search Color</option>
+    <option value="">Black</option>
+    <option value="">orange</option>
+    <option value="">nevy blue</option>
+    <option value="">gray</option>
+</select>
+
+    <div id="box"></div>
+    <div id=footer>
+        <img src="footer.png" style="width: 100%; height: 800px;">
+    </div>
+</body>
+
+</html>
+
+<script>
+    var menData = [{
+        imgurl: "https://m.media-amazon.com/images/I/71MJ9bnxpjL._AC_SR736,920_.jpg",
+        brandname: "Under Armour",
+        productname: "Fast Left Chest 2.0 Short Sleeve",
+        price: "1529.00",
+        strikedOffPrice: "1709.00",
+    },
+    {
+        imgurl: "https://m.media-amazon.com/images/I/71I6iNvdUFL._AC_SR736,920_.jpg",
+        brandname: "Under Armour",
+        productname : "Fast Left Chest 2.0 Short Sleeve",
+        price: "694.00",
+        strikedOffPrice: "895.00",
+    },
+
+    {
+        imgurl: "https://m.media-amazon.com/images/I/618ZcqijTyL._AC_SR736,920_.jpg",
+        brandname: "Calvin Klien Underwear",
+        productname : "Cotton Classics Multipack Short Sleeve V-Neck",
+        price: "1724.00",
+        strikedOffPrice: "1895.00",
+    },
+   
+
+    {
+        imgurl: "https://m.media-amazon.com/images/I/61UlieOAG8S._AC_SR736,920_.jpg",
+        brandname: "Under Armor",
+        productname : "UA Tech Short Sleeve Tee",
+        price: "785.00",
+        strikedOffPrice: "1095.00",
+    },
+   
+
+    {
+        imgurl: "https://m.media-amazon.com/images/I/91iwrr7Lm3L._AC_SR736,920_.jpg",
+        brandname: "Calvin Klien Underwear",
+        productname : "Cotton Classics Multipack Short Sleeve V-Neck",
+        price: "724.00",
+        strikedOffPrice: "895.00",
+    },
+   
+
+    {
+        imgurl: "https://m.media-amazon.com/images/I/81PcmMN1kkL._AC_SR736,920_.jpg",
+        brandname: "Lavi's Mens",
+        productname : "541 Athletic Fit",
+        price: "340.00",
+        strikedOffPrice: "695.00",
+    },
+   
+
+    {
+        imgurl: "https://m.media-amazon.com/images/I/711tWDpLzuL._AC_SR736,920_.jpg",
+        brandname: "Lavi's Mens",
+        productname : "541 Athletic Fit",
+        price: "724.00",
+        strikedOffPrice: "895.00",
+    },
+   
+
+    {
+        imgurl: "https://m.media-amazon.com/images/I/81IhxAIlh0L._AC_SR736,920_.jpg",
+        brandname: "Lavi's Mens",
+        productname : "512 Slim Taper Fit",
+        price: "456.00",
+        strikedOffPrice: "795.00",
+    },
+   
+
+    {
+        imgurl: "https://m.media-amazon.com/images/I/81aiTjVs3xL._AC_SR736,920_.jpg",
+        brandname: "IZOD",
+        productname : "Button Down Long Sleeve Stretch Performance Gingham Shirt",
+        price: "824.00",
+        strikedOffPrice: "995.00",
+    },
+   
+
+    {
+        imgurl: "https://m.media-amazon.com/images/I/91hEhau5DhL._AC_SR736,920_.jpg",
+        brandname: "Van Heusen",
+        productname : "Big and Tall Air Short Sleeve Button Down Poly Rayon Stripe Shirt",
+        price: "1594.00",
+        strikedOffPrice: "1700.00",
+    },
+
+    {
+        imgurl: "https://m.media-amazon.com/images/I/91HbcELgdLL._AC_SR736,920_.jpg",
+        brandname: "Van Heusen",
+        productname : "Big and Tall Air Short Sleeve Button Down Poly Rayon Stripe Shirt",
+        price: "1794.00",
+        strikedOffPrice: "1970.00",
+    },
+
+    {
+        imgurl: "https://m.media-amazon.com/images/I/81TDxLMakwL._AC_SR736,920_.jpg",
+        brandname: "Levi's Mens",
+        productname : "512 Slim Taper Fit",
+        price: "1794.00",
+        strikedOffPrice: "1890.00",
+    },
+];
+
+   
+
+    localStorage.setItem("menData", JSON.stringify(menData));
+    var product = JSON.parse(localStorage.getItem("menData")) || [];
+    //  var cartArr=[];
+    var cartArr = JSON.parse(localStorage.getItem("CartItems")) || [];
+    product.map(function (data) {
+        console.log(data);
+        var div = document.createElement("div");
+
+        var image = document.createElement("img");
+        image.setAttribute("src", data.imgurl);
+
+        var brandname = document.createElement("h2");
+        brandname.textContent = data.brandname;
+
+        var productname = document.createElement("h6");
+        productname.textContent = data.productname;
+
+
+        var div2 = document.createElement("div");
+        div2.setAttribute("id", "flex");
+
+        var p1 = document.createElement("p");
+        p1.textContent = data.price;
+
+        var p2 = document.createElement("p");
+        p2.textContent = data.strikedOffPrice;
+        // p2.style.textDecoration= "line-through";
+
+        div2.append(p1, p2);
+
+        var div1 = document.createElement("div");
+        div1.setAttribute("id","flex1")
+
+        var btn1 = document.createElement("button");
+        btn1.textContent = "Add To Cart";
+        btn1.addEventListener("click", function () {
+            addToCart(data);
+        });
+
+        var btn2 = document.createElement("button");
+        btn2.textContent = "Add To wishlist";
+         btn2.addEventListener("click", function () {
+            addTOWishlist(data);
+        });
+
+        div1.append(btn1,btn2);
+
+        div.append(image, brandname, productname, div2,div1);
+
+        document.querySelector("#box").append(div);
+    });
+
+    function addToCart(data) {
+        console.log(data);
+        cartArr.push(data);
+        localStorage.setItem("CartItems", JSON.stringify(cartArr));
+        alert("added successfully");
+    }
+
+
+    function addToWishlist(data) {
+        console.log(data);
+        cartArr.push(data);
+        localStorage.setItem("CartItems", JSON.stringify(cartArr));
+        alert("added successfully");
+    }
+
+
+
+</script>

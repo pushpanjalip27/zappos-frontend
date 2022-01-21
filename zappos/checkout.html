@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkout Page</title>
+    <style>
+        #cart1 {
+            text-align: center;
+            border: none;
+            font-size: 15px;
+            width: 100%;
+            height: 40px;
+            padding-top: -50px;
+            /* justify-content: space-between; */
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            background: #e3ecf2;
+
+        }
+
+        .c1 {
+            font-size: 35px;
+            font-family: monospace;
+        }
+        #all{
+            display: flex;
+            border: 2px solid teal;
+            width: 100%;
+            height: 100%;
+
+        }
+
+
+        #check1 {
+            border: 2px solid blue;
+            width: 650px;
+            height: 600px;
+            /* margin-left: 1000px;  */
+
+        }
+
+        /* #check2{
+            border: 2px solid red;
+            height: 60%;
+        } */
+        #box {
+            display: flex;
+            /* grid-template-columns: repeat(1, 1fr); */
+            gap: 10px;
+            width: 60%;
+            height: 1000px;
+            border: 2px solid red;
+            overflow: scroll;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px;
+        }
+        #flex {
+
+            /* display: flex-start; */
+            width: 300px;
+            overflow: hidden;
+            /* justify-content: space-around; */
+        }
+
+        #flex>p:nth-child(2) {
+            text-decoration: line-through;
+        }
+
+        #check3>div {
+            display: flex;
+            width: 100%;
+            height: 115px;
+            gap: 15px;
+            justify-content: flex-end;
+        }
+
+        .view {
+            border: 2px solid black;
+            width: 100px;
+            height: 30px;
+            margin-top: 40px;
+            text-decoration: none !important;
+            /* margin-left: 140px; */
+            color: #003b5c;
+            text-align: center;
+            padding-top: 12px;
+            font-weight: bolder;
+        }
+
+        .view:hover {
+            background: #0076bd;
+            font-weight: bolder;
+            color: rgb(255, 239, 239);
+        }
+
+        .go {
+            background: #a7e688;
+            color: #003b5c;
+            width: 300px;
+            height: 35px;
+            margin-top: 40px;
+            margin-right: 10px;
+            text-align: center;
+            padding-top: 12px;
+            font-weight: bolder;
+            text-decoration: none;
+        }
+
+        .go:hover {
+            background: #c7ecb6;
+            color: #003b5c;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cart1">
+        <p>Earn Zappos VIP points worth up to $0.70 in VIP codes on this item.<span>Join today to start earning!</span>
+        </p>
+    </div>
+    <div id="all">
+        <div id="check1">
+            <h1 class="c1">My Cart</h1>
+            <div>
+                <h4 class="head"><a href="window.location.href='checkout.html"></a> </h4>
+                
+            </div>
+
+            <div id="check3">
+                <p></p>
+                <h2><b>30% OFF YOUR PURCHASE</b></h2>
+                <p>30% for first order</p>
+                <input type="text" placeholder="apply promocode">
+                <p>Use Promo Code: <span class="promo">pushpa013</span></p>
+                <button onclick="window.location.href='checkout.html'" type="text">Apply</button>
+                <div>
+                    <div class="view"><a href="cart.html" style='text-decoration: none;'>ViewCart</a></div>
+                    <div class="go"><a href="payment.html" style='text-decoration: none;'> PROCEED TO CHECHKOUT</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="box">
+            <div>
+                <h4 class="head"><a href="window.location.href='checkout.html"></a> </h4>
+                <!-- <h4 class="head"><a href="window.location.href='.html"></a> </h4> -->
+                <!-- <div><i onclick="myFunction(this)" class="fa fa-thumbs-up"></i></div> -->
+                
+            </div>
+        </div>
+    </div>
+
+   
+    </div>
+</body>
+
+</html>
+
+<script>
+
+
+    var cartArr = JSON.parse(localStorage.getItem("CartItems")) || [];
+    console.log(cartArr);
+
+    cartArr.map(function (data) {
+        var div = document.createElement("div");
+
+        var image = document.createElement("img");
+        image.setAttribute("src", data.imgurl);
+
+        var brandname = document.createElement("h1");
+        brandname.textContent = data.brandname;
+
+        var productname = document.createElement("h6");
+        productname.textContent = data.productname;
+
+
+        var div2 = document.createElement("div");
+        div2.setAttribute("id", "flex");
+
+        var p1 = document.createElement("p");
+        p1.textContent = data.price;
+
+        var p2 = document.createElement("p");
+        p2.textContent = data.strikedOffPrice;
+        // p2.style.textDecoration= "line-through";
+
+        div2.append(p1, p2);
+
+
+        div.append(image, brandname, productname, div2);
+
+        document.querySelector("#box").append(div);
+    });
+
+    var total = cartArr.reduce(function (acc, cv) {
+        return acc + Number(cv.price);
+    }, 0);
+
+    document.querySelector(".head").textContent = `Subtotal ₹ ${total}`
+    console.log(total);
+
+    div.append(h4);
+
+
+
+
+
+    var cartArr = JSON.parse(localStorage.getItem("CartItems")) || [];
+    // console.log(cartArr);
+    var total = cartArr.reduce(function (acc, cv) {
+        return +(acc.price) + Number(cv.price);
+    })
+
+    document.querySelector("#check3>p").textContent = `Subtotal ₹ ${total}`
+    console.log(total);
+
+    div.append(h4);
+
+
+</script>

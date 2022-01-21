@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/38e4633d90.js" crossorigin="anonymous"></script>
+    <style>
+        #main {
+            border: 2px solid black;
+            width: 10%;
+            height: 60px;
+            background: #0076bd;
+            color: white;
+        }
+
+        #nav1 {
+            display: flex;
+            border: 2px solid black;
+            width: 100%;
+            height: 50px;
+            background: #0076bd;
+            color: white;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        #selectTag {
+
+            width: 100%;
+            background: #0076bd;
+            color: white;
+            font-size: 20px;
+            font-weight: bolder;
+
+        }
+
+        #nav2 {
+            display: flex;
+            /* border: 2px solid black;  */
+            width: 100%;
+            height: 100px;
+            margin-top: 30px;
+            /* justify-content: space-around; */
+            /* align-items:center; */
+        }
+
+        input {
+            margin-left: 100px;
+            height: 40px;
+            padding: 5px 160px;
+            border: 1px solid gray;
+            /* border-style: dashed; */
+            margin-top: 20px;
+            /* border-radius: 5px; */
+
+
+
+        }
+
+        input:hover {
+
+
+            border: 4px solid #0076bd;
+            border-style: dashed;
+            border-radius: 5px;
+        }
+
+
+        button {
+            height: 60px;
+            padding: 10px 50px;
+            background: #003953;
+            color: white;
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        button:hover {
+
+            background: #0076bd;
+        }
+
+        #cart {
+            border: 2px solid #a7e688;
+            margin-left: 350px;
+            height: 60px;
+            width: 180px;
+            margin-top: 20px;
+
+
+        }
+
+        #cart:hover {
+            background: #a7e688;
+        }
+
+        i {
+            padding: 20px;
+            font-size: 20px;
+            margin-left: 10px;
+            color: #0a615e;
+        }
+
+        #selectTag {
+            border: transparent;
+            width: 100%;
+            background: #0076bd;
+
+
+
+        }
+
+        #nav3 {
+
+            display: flex;
+            border: none;
+            width: 100%;
+            height: 60px;
+            margin-top: 15px;
+            gap: 30px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+        }
+
+        #nav3>div {
+            font-weight: bolder;
+            color: #557b8b;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        #nav3>div>a:hover {
+            color: #0076bd;
+            border-bottom: 4px solid #0076bd;
+        }
+        #nav3>div>div>a:hover{
+            color: #0076bd;
+            border-bottom: 4px solid #0076bd;
+        }
+
+        #right {
+
+            margin-left: 750px;
+            margin-top: 20px;
+            font-weight: bolder;
+            font-size: 20px;
+            color: #557b8b;
+
+
+
+        }
+
+        #navbar {
+            text-decoration: none;
+            color: #557b8b;
+            border-bottom: none;
+            font-weight: bolder;
+            font-size: 18px;
+
+        }
+
+        #nav4 {
+            display: flex;
+            border: none;
+            width: 100%;
+            height: 40px;
+            justify-content: space-between;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            background: #e3ecf2;
+
+        }
+
+        #lesser {
+
+            padding: 10px;
+        }
+
+        #greater {
+
+            padding: 10px;
+        }
+
+        #text {
+            font-size: 20px;
+            line-height: 5px;
+            font-weight: bold;
+        }
+
+        #box1 {
+            display: flex;
+            /* border: 2px solid black;  */
+            width: 100%;
+            /* padding-top: 50px; */
+            height: 700px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+
+        #box2 {
+            width: 450px;
+            height: 400px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            margin-left: 70px;
+            margin-top: 160px;
+            background: #ffffff;
+            /* border: 2px solid red; */
+        }
+
+        #box3 {
+            border: 2px solid black;
+            width: 280px;
+            height: 40px;
+            /* text-align: center; */
+            border-radius: 6px;
+            margin-left: 20px;
+            margin-top: 80px;
+            font-size: 20px;
+            /* align-items: center; */
+            padding-top: 20px;
+        }
+
+        #box3:hover {
+            background: #003953;
+            color: white;
+            border-radius: 6px;
+        }
+
+        #box4 {
+            /* border: 2px solid red; */
+            width: 100%;
+            height: 100%;
+            background: #f6f6f6;
+            margin-left: 30px;
+            margin-right: 0px;
+        }
+
+        #box5 {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: 450px 40px;
+            gap: 20px;
+            width: 100%;
+            height: 360px;
+
+        }
+
+        .box6 {
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            width: 100%;
+            height: 300px;
+            /* margin-right: 60px; */
+        }
+
+        img {
+            width: 100%;
+            height: 180px;
+            margin: auto;
+        }
+
+        .card>p {
+            text-align: center;
+            color: #314352;
+            /* margin-top: 100px;  */
+            font-family: monospace;
+            font-size: 18px;
+        }
+
+        .a1:hover {
+            color: #0076bd;
+            text-decoration: underline;
+
+        }
+
+        #box7 {
+            display: flex;
+            /* border: 2px solid red; */
+            width: 100%;
+            height: 600px;
+            justify-content: space-between;
+            padding-top: 50px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+
+        #box8 {
+            /* border: 2px solid black; */
+            width: 450px;
+            height: 550px;
+            background: #f6f6f4;
+            text-align: center;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+
+        .a4 {
+            text-decoration: center;
+            color: #003953;
+            font-weight: bolder;
+            /* font-family: monospace; */
+            font-size: 18px;
+            text-align: center;
+
+        }
+
+        .a4:hover {
+            color: #0076bd;
+            text-decoration: underline;
+        }
+
+        .a2 {
+            color: #1f2f42;
+            font-size: 20px;
+            font-weight: bolder;
+            text-decoration: none;
+        }
+
+        .a3 {
+            text-decoration: none;
+            font-size: 18px;
+            color: #575757;
+        }
+
+        #box10 {
+            /* border: 2px solid red; */
+            display: flex;
+
+            /* border: none; */
+            width: 100%;
+            height: 700px;
+            padding-top: 60px;
+
+        }
+
+        #box11 {
+            border: 2px solid #e3925b;
+            background: #e3925b;
+            width: 50%;
+            height: 100%;
+        }
+
+        #boxx11 {
+            border: 2px solid #e3925b;
+            width: 700px;
+            height: 640px;
+            margin-top: 30px;
+            margin-left: 30px;
+            margin-bottom: 30px;
+            margin-right: 30px;
+            border-radius: 45px;
+            background: white;
+        }
+
+        #boxx12 {
+            border: transparent;
+            height: 620px;
+            margin: 7px 8px 3px 8px;
+            border-radius: 45px;
+            background: #e3925b;
+        }
+
+        .text1 {
+            font-size: 25px;
+            margin-left: 50px;
+
+        }
+
+        .text2 {
+            font-size: 25px;
+            margin-left: 200px;
+        }
+
+        #imgTag1 {
+            margin-top: 200px;
+        }
+
+        #p1 {
+            border: 2px solid black;
+            width: 350px;
+            height: 50px;
+            font-weight: bolder;
+            margin-top: 30px;
+            margin-left: 180px;
+            text-align: center;
+            padding-top: 10px;
+            font-size: 20px;
+        }
+
+        #p1:hover {
+            background: #000000;
+            color: white;
+        }
+
+        #box12 {
+            border: none;
+            width: 50%;
+            height: 100%;
+        }
+
+        #box13 {
+            display: flex;
+            /* border: 2px solid black;  */
+            width: 100%;
+            height: 600px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            padding-top: 50px;
+        }
+
+        #box14 {
+            border: none;
+            width: 40%;
+            height: 300px;
+            margin-left: 70px;
+            font: bold;
+            text-align: center;
+            margin-top: 250px;
+            background: #ffffff;
+            text-align: center;
+
+        }
+
+        #box15 {
+            border: 2px solid black;
+            width: 60%;
+            height: 40px;
+            text-align: center;
+            border-radius: 6px;
+            margin-left: 20px;
+            margin-top: 100px;
+            font-size: 20px;
+            /* align-items: center; */
+            /* padding-top: 20px; */
+        }
+
+        #box15:hover {
+            background: #003953;
+            color: white;
+            border-radius: 6px;
+        }
+
+        #box16 {
+            /* border: 2px solid red; */
+            width: 65%;
+            height: 100%;
+            background: #f6f6f6;
+            margin-left: 30px;
+            margin-right: 0px;
+        }
+
+        .a5 {
+            text-decoration: none;
+            color: #003953;
+            font-weight: bolder;
+            font-size: 30px;
+            text-align: center;
+
+        }
+
+        .a6 {
+            color: #1f2f42;
+            font-size: 25px;
+            text-decoration: none;
+            margin: auto;
+        }
+
+
+        .a7 {
+            font-weight: bolder;
+            color: #575757;
+            border: 3px solid #1f2f42;
+            margin-left: 30px;
+            text-decoration: none;
+            padding: 10px;
+            padding-bottom: 20px;
+        }
+
+        .a7:hover {
+            background: #1f2f42;
+            color: white;
+
+
+        }
+
+        #box17 {
+            display: flex;
+            justify-content: space-between;
+            /* grid-template-columns: repeat(6,1fr); */
+            gap: 20px;
+            width: 100%;
+            height: 500px;
+        }
+
+        #box18 {
+            margin-left: 0px;
+            width: 300px;
+            height: 450px;
+
+        }
+
+        #box19 {
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            width: 100%;
+            height: 250px;
+            /* text-align: center; */
+            background: #f5f5f5;
+
+        }
+
+        .a8 {
+            display: flex;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgb(75, 59, 59);
+        }
+
+        .a8:hover {
+            text-decoration: 3px underline;
+            color: #0076bd;
+        }
+
+        .a9 {
+            font-weight: bolder;
+            font-size: 18px;
+
+        }
+
+        .a9:hover {
+            /* text-decoration: underline; */
+            border-bottom: 3px solid #0076bd;
+            color: #0076bd;
+        }
+
+        #box20 {
+            display: flex;
+            border: none;
+            width: 100%;
+            height: 700px;
+        }
+
+        #box21 {
+            border: none;
+            width: 950px;
+            height: 100%;
+
+
+        }
+
+        #box22 {
+            border: none;
+            margin-top: 180px;
+            width: 400px;
+            height: 350px;
+            margin-left: 100px;
+            /* text-align: center; */
+            margin-right: 200px;
+        }
+
+        #box23 {
+            border: 2px solid #000000;
+            width: 320px;
+            height: 50px;
+            margin-top: 50px;
+            /* margin-left: 40px; */
+            margin-right: 50px;
+            font-size: 20px;
+            /* text-align: center; */
+            padding-top: 20px;
+        }
+
+        #box23:hover {
+            font-weight: bolder;
+            color: white;
+            background: #1f2f42;
+        }
+
+        .a10 {
+
+            font-size: 30px;
+            font-family: serif;
+            margin-left: 0px;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .a11 {
+            margin-left: 0px;
+            font-size: 30px;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .a12 {
+            font-size: 20px;
+            text-decoration: none;
+            color: #000e25;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main">
+        <img src="https://m.media-amazon.com/images/G/01/zappos/melody/black-logo.svg"
+            style="width:120px; height: 60px;" />
+    </div>
+    <div id="nav1">
+        <form>
+            <select id="selectTag">
+                <option value="Customer Support">Customer Support</option>
+                <option value="Contact info">Contact info</option>
+                <option value="FAQ">FAQ</option>
+                <option value="Give Us Feedback">Give Us Feedback</option>
+            </select>
+        </form>
+        <h2>Available 24/7 at (800) 927-7671 </h2>
+        <h2>Try select running shoes for 30 days & return them if you’re not 100% satisfied! More about <br>Runlimited
+        </h2>
+
+
+    </div>
+    <div id="nav2">
+        <img src="https://m.media-amazon.com/images/G/01/zappos/melody/zapposPBS._CB1509642213_.svg"
+            style="width: 180px; height: 120px;" />
+        <input type="text" placeholder="Search For Shoes , Clothes,etc." />
+        <button>Search</button>
+        <div id="cart"><i class="fas fa-shopping-cart">MY CART</i></div>
+    </div>
+
+    <div id="nav3">
+        <div><a id="navbar" href="new.html">New</a></div>
+        <div><a id="navbar" href="women.html">Women</a></div>
+        <div><a id="navbar" href="men.html">Men</a></div>
+        <div><a id="navbar" href="kids.html">Kids</a></div>
+        <div><a id="navbar" href="department.html">Departments</a></div>
+        <div><a id="navbar" href="sale.html">Sale</a></div>
+        <div><a id="navbar" href="brands.html">Brands</a></div>
+        <div><a id="navbar" href="clothes.html">Clothes</a></div>
+        <div id="right">
+            <div><a id="navbar" href="register.html">Register/SignIn</a></div>
+        </div>
+    </div>
+
+
+    <div id="nav4">
+        <i class="fas fa-less-than" id="lesser"></i>
+        <p id="text">New on Zappos: Home Be the first to shop the newest blankets, pillows, drinkware & more—all on
+            Zappos! Shop Home Now</p>
+        <i class="fas fa-greater-than" id="greater"></i>
+    </div>
+
+
+    <div id="box1">
+        <div id="box2">
+            <h1>Weatherproof Boots: Conquer the Cold</h1>
+            <p>Protect your feet with waterproofing and insulation!</p>
+            <h1 id="box3">SHOP WATERPROOF BOOTS</h1>
+
+        </div>
+        <div id="box4">
+            <img src="https://m.media-amazon.com/images/G/01/2022/homepage1.17/BROADCAST-SHEARLING-BOOTS-JANUARY-HERO-1440x700.jpg"
+                style="width: 100%; height:500px ;">
+        </div>
+    </div>
+
+    <div>
+        <h1>Shop Popular Categories</h1>
+    </div>
+
+
+    <div id="box5">
+        <div class="card">
+            <div class="box6">
+                <img src="https://m.media-amazon.com/images/I/71KlAqPFoSL._AC_SX255_.jpg">
+            </div>
+            <p><a class="a1" href="#">Winter Boots</a></p>
+        </div>
+        <div class="card">
+            <div class="box6">
+                <img src="https://m.media-amazon.com/images/I/81XxzqqQyiL._AC_SX255_.jpg">
+            </div>
+            <p><a class="a1" href="#">Sneakers And Athletics Shoes</a></p>
+        </div>
+        <div class="card">
+            <div class="box6">
+                <img src="https://m.media-amazon.com/images/I/71YaRXs33jL._AC_SX255_.jpg">
+            </div>
+            <p><a class="a1" href="#">Slipers</a></p>
+        </div>
+        <div class="card">
+            <div class="box6">
+                <img src="https://m.media-amazon.com/images/I/613vJUT5EdL._AC_SX255_.jpg">
+
+            </div>
+            <p><a class="a1" href="#">Lifestyle Sneakers</a></p>
+        </div>
+
+        <div class="card">
+            <div class="box6">
+                <img src="https://m.media-amazon.com/images/I/71v2eR76aPL._AC_SX255_.jpg"
+                    style="width:120px;  height:200p;">
+            </div>
+            <p><a class="a1" href="#">Coats And Outerwear</a></p>
+        </div>
+        <div class="card">
+            <div class="box6">
+                <img src="https://m.media-amazon.com/images/I/8168D3uAUxL._AC_SX255_.jpg">
+            </div>
+            <p><a class="a1" href="#">Lace Up Boots</a></p>
+        </div>
+    </div>
+
+    <div id="box7">
+        <div id="box8">
+            <div id="box9">
+                <img src="https://m.media-amazon.com/images/G/01/2022/mens-shoes/MENS-BESTSELLING-BOOTS-JANUARY-TRIPTYCH-500X500.jpg"
+                    style="width: 100%; height: 100%;">
+            </div>
+            <p><a class="a2" href="#">Best-Selling Basics:Men's Boots</a></p>
+            <p><a class="a3" href="#">See yoiurself if why these and brands are popular!</a></p>
+            <h><a class="a4" href="#">SHOP MEN'S BEST-SELLING BOOTS</a></h>
+
+        </div>
+        <div id="box8">
+            <div id="box9">
+                <img src="https://m.media-amazon.com/images/G/01/2022/homepage1.17/HOMEPAGE-WINTER-ON-SALE-OUTERWEAR-JANUARY-TRIPTYCH-500x500_1.jpg"
+                    style="width: 100%; height: 100%;">
+            </div>
+            <p><a class="a2" href="#">Coats & Outerwear on Sale</a></p>
+            <p><a class="a3" href="#">Save big on budget-friendly jackets,vests,and more!</a></p>
+            <h><a class="a4" href="#">SHOP SALE COATS & OUTERWEAR</a></h>
+
+        </div>
+        <div id="box8">
+            <div id="box9">
+                <img src="https://m.media-amazon.com/images/G/01/2022/Kids/KIDS-BABY-WINTER-BOOTS-JANUARY-TRIPTYCH-500X500.jpg"
+                    style="width: 100%; height: 100%;">
+            </div>
+            <p><a class="a2" href="#">Winter Boots for kids </a></p>
+            <p><a class="a3" href="#">Help them enjoy the outdoor with warm,water-resistant designs!</a></p>
+            <h><a class="a4" href="#">SHOP KID'S WINTER BOOTS</a></h>
+
+        </div>
+    </div>Conquer
+
+    <div id="box10">
+        <div id=box11>
+            <div id="boxx11">
+                <div id="boxx12">
+                    <img id="imgTag1"
+                        src="https://m.media-amazon.com/images/G/01/2021/homepage11.01/COOP-NEW-ARRIVAL-LOGO-1X_3.svg">
+                    <h class="text1">Make keeping cozy your New Year resolution with the UGG® </h>
+                    <h class="text2"> Neumel and Classic Clear Mini!</h>
+                    <div id="p1">
+                        <h>SHOP UGG® FOOTWEAR</h>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="box12">
+            <img src="https://m.media-amazon.com/images/G/01/2022/homepage1.17/COOP-UGG-NEW-ARRIVALS-DESKTOP-RIGHT-1X-634x634.jpg"
+                style="width: 100%; height: 100%;">
+        </div>
+    </div>
+
+    <div id="box13">
+        <div id="box14">
+            <p><a class="a5" href="#">Lace Up In New ASICS</a></p>
+            <p><a class="a6" href="#">Treat your feet to an ultra-cushy & supportive ride withGT-2000 sneakesr.</a></p>
+            <p><a class="a7" href="#">SHOP NEW ASICS</a></p>
+
+        </div>
+        <div id="box16">
+            <img src="https://m.media-amazon.com/images/G/01/2022/homepage1.17/BROADCAST-SHEARLING-BOOTS-JANUARY-HERO-1440x700.jpg"
+                style="width: 100%; height:500px ;">
+        </div>
+    </div>
+
+    <div>
+        <h1>Popular Items</h1>
+    </div>
+    <div id="box17">
+        <div id="box18">
+            <div id="box19">
+                <img src="https://m.media-amazon.com/images/I/71feHNRKwUL._AC_SX255_.jpg">
+            </div>
+            <h> <i class="far fa-heart"></i>7373</h>
+            <h><a class="a8 href=" #>Columbia</a></h>
+            <h><a class="a9 href=" #>ICE Maiden II<a></h>
+            <p class="rate">$79.95</p>
+            <p class="strike">MSRM.$103.66</p>
+        </div>
+
+        <div id="box18">
+            <div id="box19">
+                <img src="https://m.media-amazon.com/images/I/71ox0GPQkLL._AC_SX255_.jpg">
+            </div>
+            <h> <i class="far fa-heart"></i>7373</h>
+            <h><a class="a8 href=" #>Kamik</a></h>
+            <h><a class="a9 href=" #>Greenbay 4</a></h>
+            <p class="rate">$79.95</p>
+            <p class="strike">MSRM.$129.6$</p>
+
+        </div>
+
+        <div id="box18">
+            <div id="box19">
+                <img src="https://m.media-amazon.com/images/I/6169BeXLGJL._AC_SX255_.jpg">
+            </div>
+            <h> <i class="far fa-heart"></i>7373</h>
+            <h><a class="a8 href=" #>Cross Kids </a></h>
+            <h><a class="a9 href=" #>Classic Tie-Dye Graphic<a></h>
+            <p class="rate">$79.95</p>
+            <p class="strike">MSRM.$39.95</p>
+        </div>
+
+        <div id="box18">
+            <div id="box19">
+                <img src="https://m.media-amazon.com/images/I/81p518uwVlL._AC_SX255_.jpg">
+            </div>
+            <h> <i class="far fa-heart"></i>7373</h>
+            <h><a class="a8 href=" #>Cross</a></h>
+            <h><a class="a9 href=" #>Classic Tie-Dye Graphic ....<a></h>
+            <p class="rate">$29.95</p>
+            <p class="strike">MSRP.$54.95</p>
+        </div>
+
+        <div id="box18">
+            <div id="box19">
+                <img src="https://m.media-amazon.com/images/I/71fJB1uzEoL._AC_SX255_.jpg">
+            </div>
+            <h> <i class="far fa-heart"></i>2146</h>
+            <h><a class="a8 href=" #>Crocs</a></h>
+            <h><a class="a9 href=" #>Swiftwater Sandal<a></h>
+            <p class="rate">$27.83</p>
+            <p class="strike">MSRP.$35.00</p>
+        </div>
+
+        <div id="box18">
+            <div id="box19">
+                <img src="https://m.media-amazon.com/images/I/81UcYrZrzRL._AC_SX255_.jpg"
+                    style="width: 100%; height: 200px;">
+            </div>
+            <h> <i class="far fa-heart"></i>181</h>
+            <h><a class="a8 href=" #>BOBS From SKECHERS</a></h>
+            <h><a class="a9 href=" #>TOO COZY - Pooch Parade<a></h>
+            <p class="rate">$35.99</p>
+            <p class="strike">MSRM.$40.00</p>
+        </div>
+    </div>
+    </div>
+
+    <div id="box20">
+        <div id="box21">
+            <img src="https://m.media-amazon.com/images/G/01/2021/style-room/FASHION-THE-STYLE-ROOM-STRAIGHT-LEG-DENIM-JANUARY-960x500._SX650_.jpg "
+                style="width: 100%; height: 100%;">
+        </div>
+        <div id="box22">
+            <h1><a class="a10" href="#">THE STYLE ROOM</a></h1>
+            <p><a class="a11" href="#">Seasonless Style</a></p>
+            <p><a class="a12" href="#">Curate a closet of timeless pieces that defy time trends- from a versatile dress
+                    to the perfect boot,plus bags to pair.</a></p>
+            <h1 id="box23">SHOP SEASONLESS STYLE</h1>
+
+        </div>
+    </div>
+    </div>
+
+    <div id="box24">
+        <img src="nike1.png" style="width: 100%; height: 450px;" />
+    </div>
+
+    <div id="box25">
+        <img src="case2.png" style="width: 100%; height: 700px;">
+
+    </div>
+
+    <div id="box26">
+        <img src="1.png" style="width: 100%; height: 300px;">
+    </div>
+
+    <div id="box27">
+        <img src="2.png" style="width: 100%; height: 600px;">
+    </div>
+
+    <div id="box28">
+        <img src="footer.png" style="width: 100%; height: 800px;">
+    </div>
+
+
+</body>
+
+<script>
+    document.getElementById("women").addEventListener("click", function () {
+        window.location.href = "women.html";
+    });
+
+    document.getElementById("men").addEventListener("click", function () {
+        window.location.href = "men.html";
+    });
+
+    document.getElementById("kids").addEventListener("click", function () {
+        window.location.href = "kids.html";
+    });
+
+    document.getElementById("register").addEventListener("click", function () {
+        window.location.href = "register.html";
+    });
+
+    document.getElementById("signin").addEventListener("click", function () {
+        window.location.href = "signin.html";
+    });
+</script>

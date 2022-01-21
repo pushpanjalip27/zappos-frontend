@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup page</title>
+<style>
+    #cont{
+        margin: auto;
+        border:1px solid mediumvioletred;
+        width: 500px;
+        height: 580px;
+        padding: 20px;
+
+    }
+    .logo{
+         margin: auto;
+    }
+
+    form{
+        margin: auto;
+        display: grid;
+        width:400px;
+        grid-gap:10px;
+        height:270px;
+    }
+    button{
+        border: 2px solid black;
+        background: #003953;
+        color: white;
+        height: 40px;
+        font-weight: bolder;
+    }
+    a{
+        text-decoration: none;
+        font-size: 20px;
+    }
+    a:hover{
+        border-bottom: 1px solid #3f6d80;
+    }
+    #n{
+        font-size: 15px;
+        font-weight: bold;
+        color:#00395c;
+    }
+</style>
+</head>
+<body>
+    <div class="logo">
+        <img src="https://m.media-amazon.com/images/G/01/zappos/melody/black-logo.svg" width="100%" height="60px" ">
+    </div>
+    <div id="cont">
+    <div>
+        <form>
+            <h>Name</h>
+            <input id="name" type="text" />
+            <h>Email </h>
+            <input id="email" type="email"/>
+            <h>Password</h>
+            <input id="pass" type="password"  placeholder="At least 6 character"/>
+            <h>Re-enter password</h>
+            <input id="cpass" type="password"/>
+            <i class="fas fa-info"></i>
+            <p>Passwords must be at least 6 characters.</p>
+           <input  id="sub" type="submit" value="Create Your Zappos acount"/>
+
+        <p>Don't have an email address or need additional help? Don't worry! Give us a call at <a><span id="n">(800) 927-7671</span></a></p>
+        <p>Registering means you agree to the Zappos terms of use and privacy policy</p>
+        <p>Already have an account? <a href=""><span>Sign In</span></a></p>
+        </form>
+    </div>
+    </div>
+   
+</body>
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit" ,formSubmit);
+    var arr=JSON.parse(localStorage.getItem("userDatabase")) || [];
+    // console.log(arr);
+    function formSubmit(event){
+        event.preventDefault();
+        var name= document.querySelector("#name").value;
+        var email= document.querySelector("#email").value;
+        var pass= document.querySelector("#pass").value;
+        var cpass=document.querySelector("#cpass").value;
+
+        var userData = {
+            name:name,
+            emailAdd:email,
+            password:pass,
+            confrmpass:cpass,
+        }
+       arr.push(userData);
+    //    console.log(arr);
+
+    localStorage.setItem("userDatabase",JSON.stringify(arr));
+    alert("Sign Up Success");
+    window.location.href="signin.html";
+    }
+</script>
